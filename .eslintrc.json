@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "object-curly-newline": "off"
+  },
+  "env": {
+    "jest": true,
+    "browser": true
+  }
+}
