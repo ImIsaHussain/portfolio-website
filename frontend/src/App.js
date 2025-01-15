@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import CustomCursor from './components/common/CustomCursor';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import CustomCursor from './components/common/CustomCursor';
 
 function App() {
   return (
-    <Router>
+    <>
       <CustomCursor />
       <Navbar />
       <main>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-    </Router>
+    </>
   );
 }
 
