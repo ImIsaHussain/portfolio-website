@@ -3,8 +3,9 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import Loader from './components/common/Loader';
 import Navbar from './components/layout/Navbar';
 import CustomCursor from './components/common/CustomCursor';
-import Home from './pages/Home';
+import Hero from './pages/home/Hero';
 import Contact from './pages/Contact';
+import Home from './pages/home/Home';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -29,8 +30,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Home />} />
-          <Route path="/blog" element={<Home />} />
+          <Route path="/projects" element={<Hero />} />
+          <Route path="/blog" element={<Hero />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

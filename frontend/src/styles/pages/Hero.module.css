@@ -1,0 +1,222 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f68c8c;
+  position: relative;
+  overflow: hidden;
+}
+
+.primaryFont {
+  font-family: 'Times New Roman', serif;
+  font-size: 24px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated gradient balls */
+.gradientBall {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.8;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.ball1 {
+  composes: gradientBall;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle at center, #ff7979, #ee5253);
+  animation: bounceTopLeft 20s ease-in-out infinite;
+  top: 0;
+  left: 0;
+}
+
+.ball2 {
+  composes: gradientBall;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at center, #4834d4, #686de0);
+  animation: bounceTopRight 18s ease-in-out infinite;
+  top: 40px;
+  right: 0;
+}
+
+.ball3 {
+  composes: gradientBall;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at center, #6ab04c, #badc58);
+  animation: bounceBottom 22s ease-in-out infinite;
+  bottom: 60px;
+}
+
+.ball4 {
+  composes: gradientBall;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle at center, #ff7979, #ee5253);
+  animation: bounceBottomRight 19s ease-in-out infinite;
+  bottom: 0;
+  right: 0;
+}
+
+.ball5 {
+  composes: gradientBall;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, #4834d4, #686de0);
+  animation: bounceCorners 25s ease-in-out infinite;
+  top: 0;
+  left: 0;
+}
+
+.ball6 {
+  composes: gradientBall;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle at center, #eb4d4b, #ff7979);
+  animation: bounceDiagonal 23s ease-in-out infinite;
+  top: 50%;
+  left: 0;
+}
+
+.ball7 {
+  composes: gradientBall;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, #6c5ce7, #a55eea);
+  animation: bounceZigZag 21s ease-in-out infinite;
+  top: 20%;
+  right: 20%;
+}
+
+.ball8 {
+  composes: gradientBall;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at center, #00b894, #00cec9);
+  animation: bounceCircle 24s linear infinite;
+  bottom: 30%;
+  left: 40%;
+}
+
+.ball9 {
+  composes: gradientBall;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle at center, #fdcb6e, #ffeaa7);
+  animation: bounceCross 26s ease-in-out infinite;
+  top: 30%;
+  left: 30%;
+}
+
+.ball10 {
+  composes: gradientBall;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at center, #fd79a8, #e84393);
+  animation: bounceRandom 17s ease-in-out infinite;
+  bottom: 20%;
+  right: 25%;
+}
+
+/* Grain overlay */
+.grain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/images/gradientNoiseSVG.svg");
+  opacity: 0.08;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@keyframes bounceTopLeft {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(90vw, 40vh); }
+  50% { transform: translate(40vw, 80vh); }
+  75% { transform: translate(10vw, 30vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceTopRight {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-80vw, 30vh); }
+  50% { transform: translate(-30vw, 70vh); }
+  75% { transform: translate(-60vw, 20vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceBottom {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(70vw, -40vh); }
+  50% { transform: translate(20vw, -70vh); }
+  75% { transform: translate(-40vw, -30vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceBottomRight {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-60vw, -50vh); }
+  50% { transform: translate(-80vw, -20vh); }
+  75% { transform: translate(-30vw, -60vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceCorners {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(90vw, 0); }
+  50% { transform: translate(90vw, 90vh); }
+  75% { transform: translate(0, 90vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceDiagonal {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(80vw, -40vh); }
+  50% { transform: translate(0, -80vh); }
+  75% { transform: translate(80vw, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceZigZag {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-40vw, 30vh); }
+  40% { transform: translate(40vw, -30vh); }
+  60% { transform: translate(-40vw, -30vh); }
+  80% { transform: translate(40vw, 30vh); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceCircle {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(40vw, 40vh) rotate(90deg); }
+  50% { transform: translate(0, 80vh) rotate(180deg); }
+  75% { transform: translate(-40vw, 40vh) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes bounceCross {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50vw, 0); }
+  50% { transform: translate(0, 50vh); }
+  75% { transform: translate(-50vw, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounceRandom {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(30vw, -20vh); }
+  40% { transform: translate(-40vw, 30vh); }
+  60% { transform: translate(20vw, -40vh); }
+  80% { transform: translate(-30vw, 20vh); }
+  100% { transform: translate(0, 0); }
+}

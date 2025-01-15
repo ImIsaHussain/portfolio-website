@@ -1,0 +1,37 @@
+.section {
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.contactInfo {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactInfo p {
+  margin-bottom: 2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.socialLinks a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #333;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background-color: #333;
+  color: white;
+}

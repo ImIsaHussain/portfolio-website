@@ -1,14 +1,25 @@
-.primaryFont {
-  font-family: 'Times New Roman', serif;
-  font-size: 24px;
-  color: white;
+.wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  background-color: black;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.sections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  position: absolute;
+  width: 100%;
+  transform-style: preserve-3d;
 }
