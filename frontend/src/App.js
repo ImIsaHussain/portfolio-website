@@ -1,27 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline } from '@mui/material';
-import theme from './styles/themes/theme';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
+import CustomCursor from './components/common/CustomCursor';
 
 function App() {
   return (
     <Router>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className="App">
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<div>Projects Page Coming Soon</div>} />
-              <Route path="/blog" element={<div>Blog Page Coming Soon</div>} />
-              <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
-            </Routes>
-          </main>
-        </div>
-      </ThemeProvider>
+      <CustomCursor />
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Home />} />
+          <Route path="/blog" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
     </Router>
   );
 }
