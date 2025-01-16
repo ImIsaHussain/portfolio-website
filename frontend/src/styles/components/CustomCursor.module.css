@@ -1,13 +1,13 @@
 /* custom cursor */
 .customCursor {
-  width: 40px;
-  height: 40px;  
+  width: 20px;
+  height: 20px;  
   background-color: black;
   border: none;
   border-radius: 50%;
   position: fixed;
-  top: -20px;
-  left: -20px;
+  top: -10px;
+  left: -10px;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
@@ -23,8 +23,8 @@
 
 /* custom cursor hover */
 .hover {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   transition: width 0.2s ease-out, height 0.2s ease-out;
 }
 

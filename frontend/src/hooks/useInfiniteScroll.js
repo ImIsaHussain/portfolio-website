@@ -40,8 +40,9 @@ const useInfiniteScroll = (containerRef, sectionsRef) => {
 
     const handleScroll = (e) => {
       e.preventDefault();
+      const delta = e.deltaY || e.detail || e.wheelDelta;
       setScrollY((prev) => {
-        const newScroll = prev - e.deltaY * 0.5;
+        const newScroll = prev - delta * 0.5;
         const wrapped = ((newScroll % totalHeight) + totalHeight) % totalHeight;
         updateSections(sections, sectionHeights, totalHeight, wrapped);
         return wrapped;
@@ -51,8 +52,10 @@ const useInfiniteScroll = (containerRef, sectionsRef) => {
     // Initial setup
     updateSections(sections, sectionHeights, totalHeight, scrollY);
 
-    // Add event listeners
+    // Add event listeners for both modern and legacy mouse wheels
     container.addEventListener('wheel', handleScroll, { passive: false });
+    container.addEventListener('mousewheel', handleScroll, { passive: false });
+    container.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
 
     // Handle window resize
     const handleResize = () => {
@@ -64,6 +67,8 @@ const useInfiniteScroll = (containerRef, sectionsRef) => {
 
     return () => {
       container.removeEventListener('wheel', handleScroll);
+      container.removeEventListener('mousewheel', handleScroll);
+      container.removeEventListener('DOMMouseScroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
   }, [containerRef, sectionsRef, scrollY, updateSections, getSectionHeights, getTotalHeight]);

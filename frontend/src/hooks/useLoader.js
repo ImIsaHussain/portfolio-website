@@ -1,20 +1,25 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function useLoader() {
   const [isLoading, setIsLoading] = useState(false);
-  const location = useLocation();
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const handleRouteChange = (path) => {
     setIsLoading(true);
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800); // Adjust timing as needed
+    setTimeout(() => {
+      navigate(path);
+      // Wait for the page to load and then start fade out
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1550);
+    }, 1550);
+  };
 
-    return () => clearTimeout(timer);
-  }, [location]);
-
-  return isLoading;
+  return {
+    isLoading,
+    handleRouteChange
+  };
 }
 
 export default useLoader;

@@ -13,6 +13,7 @@
   /* Typography */
   --primary-font: 'Arial', sans-serif;
   --secondary-font: 'Helvetica', sans-serif;
+  --badeen-font: 'Badeen Display', monospace;
 
   /* Font size */
   --font-size-1: 12px;
@@ -20,6 +21,7 @@
   --font-size-3: 16px;
   --font-size-4: 18px;
   --font-size-5: 20px;
+  --font-size-display: 620px;
 
   /* Font weight */
   --font-weight-1: 300;

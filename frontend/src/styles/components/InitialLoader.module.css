@@ -1,0 +1,35 @@
+.initialLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background: linear-gradient(to right, 
+    #1a1a1a var(--progress),
+    #d6d6d6 var(--progress)
+  );
+  transition: background 1s ease;
+  opacity: var(--opacity, 1);
+  transition: opacity 1s ease-out;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: difference;
+}
+
+.percentage {
+  font-size: var(--font-size-display);
+  font-weight: normal;
+  color: white;
+  font-family: var(--badeen-font);
+  min-width: 200px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

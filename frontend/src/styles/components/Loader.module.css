@@ -38,7 +38,7 @@
 .scribblePath {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
-  animation: drawPath 2s linear;
+  animation: drawPath 3s linear;
 }
 
 @keyframes drawPath {

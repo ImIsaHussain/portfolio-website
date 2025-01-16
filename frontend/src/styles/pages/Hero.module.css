@@ -10,8 +10,8 @@
 }
 
 .primaryFont {
-  font-family: 'Times New Roman', serif;
-  font-size: 24px;
+  font-family: var(--badeen-font);
+  font-size: 10rem;
   color: white;
   position: relative;
   z-index: 2;
@@ -32,7 +32,7 @@
   width: 700px;
   height: 700px;
   background: radial-gradient(circle at center, #ff7979, #ee5253);
-  animation: bounceTopLeft 20s ease-in-out infinite;
+  animation: bounceTopLeft 40s ease-in-out infinite;
   top: 0;
   left: 0;
 }
@@ -42,7 +42,7 @@
   width: 500px;
   height: 500px;
   background: radial-gradient(circle at center, #4834d4, #686de0);
-  animation: bounceTopRight 18s ease-in-out infinite;
+  animation: bounceTopRight 38s ease-in-out infinite;
   top: 40px;
   right: 0;
 }
@@ -52,7 +52,7 @@
   width: 350px;
   height: 350px;
   background: radial-gradient(circle at center, #6ab04c, #badc58);
-  animation: bounceBottom 22s ease-in-out infinite;
+  animation: bounceBottom 42s ease-in-out infinite;
   bottom: 60px;
 }
 
@@ -61,7 +61,7 @@
   width: 650px;
   height: 650px;
   background: radial-gradient(circle at center, #ff7979, #ee5253);
-  animation: bounceBottomRight 19s ease-in-out infinite;
+  animation: bounceBottomRight 39s ease-in-out infinite;
   bottom: 0;
   right: 0;
 }
@@ -71,7 +71,7 @@
   width: 400px;
   height: 400px;
   background: radial-gradient(circle at center, #4834d4, #686de0);
-  animation: bounceCorners 25s ease-in-out infinite;
+  animation: bounceCorners 45s ease-in-out infinite;
   top: 0;
   left: 0;
 }
@@ -81,7 +81,7 @@
   width: 580px;
   height: 580px;
   background: radial-gradient(circle at center, #eb4d4b, #ff7979);
-  animation: bounceDiagonal 23s ease-in-out infinite;
+  animation: bounceDiagonal 43s ease-in-out infinite;
   top: 50%;
   left: 0;
 }
@@ -91,7 +91,7 @@
   width: 320px;
   height: 320px;
   background: radial-gradient(circle at center, #6c5ce7, #a55eea);
-  animation: bounceZigZag 21s ease-in-out infinite;
+  animation: bounceZigZag 41s ease-in-out infinite;
   top: 20%;
   right: 20%;
 }
@@ -101,7 +101,7 @@
   width: 480px;
   height: 480px;
   background: radial-gradient(circle at center, #00b894, #00cec9);
-  animation: bounceCircle 24s linear infinite;
+  animation: bounceCircle 44s linear infinite;
   bottom: 30%;
   left: 40%;
 }
@@ -111,7 +111,7 @@
   width: 420px;
   height: 420px;
   background: radial-gradient(circle at center, #fdcb6e, #ffeaa7);
-  animation: bounceCross 26s ease-in-out infinite;
+  animation: bounceCross 24s ease-in-out infinite;
   top: 30%;
   left: 30%;
 }
@@ -121,7 +121,7 @@
   width: 350px;
   height: 350px;
   background: radial-gradient(circle at center, #fd79a8, #e84393);
-  animation: bounceRandom 17s ease-in-out infinite;
+  animation: bounceRandom 37s ease-in-out infinite;
   bottom: 20%;
   right: 25%;
 }
