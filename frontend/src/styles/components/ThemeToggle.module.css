@@ -1,0 +1,45 @@
+.container {
+  display: inline-block;
+}
+
+.toggle {
+  background-color: transparent;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.toggle .input {
+  display: none;
+}
+
+.toggle .icon {
+  grid-column: 1;
+  grid-row: 1;
+  transition: transform 500ms;
+  color: var(--text-color);
+}
+
+/* Moon icon */
+.toggle .icon:first-of-type {
+  transition-delay: 200ms;
+}
+
+/* Sun icon */
+.toggle .icon:last-of-type {
+  transform: scale(0);
+}
+
+/* When dark mode is active */
+.toggle .input:checked + .icon {
+  transform: rotate(360deg) scale(0);
+}
+
+.toggle .input:checked ~ .icon:last-of-type {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+}

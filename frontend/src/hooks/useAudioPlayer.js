@@ -1,28 +1,30 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 
 function useAudioPlayer(sounds) {
-  const [audioPlayers, setAudioPlayers] = useState({});
   const [audioInitialized, setAudioInitialized] = useState(false);
+  const audioPlayersRef = useRef({});
 
   const initializeAudio = useCallback(() => {
     if (!audioInitialized) {
-      const players = {};
       Object.entries(sounds).forEach(([key, soundPath]) => {
-        players[key] = new Audio(soundPath);
+        const audio = new Audio(soundPath);
+        // Preload the audio
+        audio.load();
+        audioPlayersRef.current[key] = audio;
       });
-      setAudioPlayers(players);
       setAudioInitialized(true);
     }
   }, [sounds, audioInitialized]);
 
   const playSound = useCallback((type) => {
-    if (!audioInitialized) return;
-    const audio = audioPlayers[type];
+    const audio = audioPlayersRef.current[type];
     if (audio) {
       audio.currentTime = 0;
-      audio.play().catch(() => {});
+      // Create and play a new instance to handle rapid clicks
+      const newAudio = audio.cloneNode();
+      newAudio.play().catch(() => {});
     }
-  }, [audioPlayers, audioInitialized]);
+  }, []);
 
   return {
     playSound,

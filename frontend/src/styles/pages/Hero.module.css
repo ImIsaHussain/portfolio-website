@@ -4,17 +4,17 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f68c8c;
+  background-color: var(--bg-primary);
   position: relative;
   overflow: hidden;
 }
 
-.primaryFont {
+.title {
   font-family: var(--badeen-font);
-  font-size: 10rem;
-  color: white;
+  font-size: var(--font-size-3);
+  color: var(--text-primary);
   position: relative;
-  z-index: 2;
+  z-index: 9999;
 }
 
 /* Animated gradient balls */
@@ -29,11 +29,11 @@
 
 .ball1 {
   composes: gradientBall;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle at center, #ff7979, #ee5253);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #17472a, #17472a);
   animation: bounceTopLeft 40s ease-in-out infinite;
-  top: 0;
+  top: 30;
   left: 0;
 }
 
@@ -41,7 +41,7 @@
   composes: gradientBall;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle at center, #4834d4, #686de0);
+  background: radial-gradient(circle at center, #e7c199, #e7c199);
   animation: bounceTopRight 38s ease-in-out infinite;
   top: 40px;
   right: 0;
@@ -51,16 +51,17 @@
   composes: gradientBall;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle at center, #6ab04c, #badc58);
+  background: radial-gradient(circle at center, #A4031F, #A4031F);
   animation: bounceBottom 42s ease-in-out infinite;
-  bottom: 60px;
+  bottom: 0;
+  left: 40%;
 }
 
 .ball4 {
   composes: gradientBall;
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle at center, #ff7979, #ee5253);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at center, #0b514d, #0b514d);
   animation: bounceBottomRight 39s ease-in-out infinite;
   bottom: 0;
   right: 0;
@@ -70,7 +71,7 @@
   composes: gradientBall;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle at center, #4834d4, #686de0);
+  background: radial-gradient(circle at center, #791616, #791616);
   animation: bounceCorners 45s ease-in-out infinite;
   top: 0;
   left: 0;
@@ -80,7 +81,7 @@
   composes: gradientBall;
   width: 580px;
   height: 580px;
-  background: radial-gradient(circle at center, #eb4d4b, #ff7979);
+  background: radial-gradient(circle at center, #CC6900, #CC6900);
   animation: bounceDiagonal 43s ease-in-out infinite;
   top: 50%;
   left: 0;
@@ -90,20 +91,20 @@
   composes: gradientBall;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle at center, #6c5ce7, #a55eea);
+  background: radial-gradient(circle at center, #FFE0B5, #FFE0B5);
   animation: bounceZigZag 41s ease-in-out infinite;
-  top: 20%;
-  right: 20%;
+  bottom: 0;
+  right: 10%;
 }
 
 .ball8 {
   composes: gradientBall;
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle at center, #00b894, #00cec9);
+  background: radial-gradient(circle at center, #007C8F, #007C8F);
   animation: bounceCircle 44s linear infinite;
   bottom: 30%;
-  left: 40%;
+  right: 0;
 }
 
 .ball9 {
@@ -112,7 +113,7 @@
   height: 420px;
   background: radial-gradient(circle at center, #fdcb6e, #ffeaa7);
   animation: bounceCross 24s ease-in-out infinite;
-  top: 30%;
+  top: 10%;
   left: 30%;
 }
 
@@ -120,10 +121,60 @@
   composes: gradientBall;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle at center, #fd79a8, #e84393);
+  background: radial-gradient(circle at center, #84012f, #84012f);
   animation: bounceRandom 37s ease-in-out infinite;
-  bottom: 20%;
-  right: 25%;
+  bottom: 5%;
+  right: 30%;
+}
+
+.ball11 {
+  composes: gradientBall;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, #d17218, #d17218);
+  animation: bounceRandom 36s ease-in-out infinite;
+  top: 30%;
+  right: 30%;
+}
+
+.ball12 {
+  composes: gradientBall;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at center, #5b0d52, #5b0d52);
+  animation: bounceRandom 39s ease-in-out infinite;
+  bottom: 40%;
+  left: 40%;
+}
+
+.ball13 {
+  composes: gradientBall;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, #6a7627, #6a7627);
+  animation: bounceRandom 40s ease-in-out infinite;
+  top: 30%;
+  left: 10%;
+} 
+
+.ball14 {
+  composes: gradientBall;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, #0b4a57, #0b4a57);
+  animation: bounceRandom 41s ease-in-out infinite;
+  top: 60%;
+  left: 60%;
+}
+
+.ball15 {
+  composes: gradientBall;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #850101, #850101);
+  animation: bounceRandom 42s ease-in-out infinite;
+  top: 70%;
+  right: 70%;
 }
 
 /* Grain overlay */

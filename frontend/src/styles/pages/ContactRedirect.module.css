@@ -1,6 +1,6 @@
 .section {
   padding: 4rem 2rem;
-  background-color: #f8f8f8;
+  background-color: var(--bg-primary);
 }
 
 .contactInfo {
@@ -11,7 +11,7 @@
 
 .contactInfo p {
   margin-bottom: 2rem;
-  color: #666;
+  color: var(--text-primary);
   line-height: 1.6;
 }
 

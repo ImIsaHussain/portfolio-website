@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../../styles/components/InitialLoader.module.css';
+import useAudioPlayer from '../../hooks/useAudioPlayer';
+import cursorSounds from '../../config/cursorSounds';
 
 function InitialLoader({ isActive }) {
   const [percentage, setPercentage] = useState(0);
   const [visible, setVisible] = useState(true);
   const currentValue = useRef(0);
   const loaderRef = useRef(null);
+  const { initializeAudio } = useAudioPlayer(cursorSounds);
 
   useEffect(() => {
     if (!isActive) return undefined;
@@ -31,10 +34,20 @@ function InitialLoader({ isActive }) {
     });
 
     const runAnimation = async () => {
+      // Initialize audio at the start
+      initializeAudio();
+
       await animateToNumber(0, 300);
       await animateToNumber(37, 0);
       await animateToNumber(98, 300);
       await animateToNumber(100, 200);
+
+      // wait at 100 for 2 seconds
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 500);
+      });
 
       // Start fade out
       if (loaderElement) {
@@ -43,7 +56,7 @@ function InitialLoader({ isActive }) {
       // Wait for fade out animation to complete before hiding
       setTimeout(() => {
         setVisible(false);
-      }, 500);
+      }, 1000);
     };
 
     runAnimation();
@@ -57,7 +70,7 @@ function InitialLoader({ isActive }) {
         loaderElement.style.setProperty('--opacity', '1');
       }
     };
-  }, [isActive]);
+  }, [isActive, initializeAudio]);
 
   if (!isActive || !visible) return null;
 

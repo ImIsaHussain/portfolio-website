@@ -1,6 +1,29 @@
 .section {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--badeen-font);
+  font-size: var(--font-size-2);
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: var(--font-size-1);
+  line-height: 1.6;
+  margin-bottom: 3rem;
 }
 
 .skills {
@@ -10,15 +33,9 @@
   margin-top: 2rem;
 }
 
-.skills div {
+.skills > div {
   padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease;
-}
-
-.skills div:hover {
-  transform: translateY(-2px);
-  background-color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  font-size: 1rem;
 }

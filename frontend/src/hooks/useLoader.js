@@ -9,7 +9,6 @@ function useLoader() {
     setIsLoading(true);
     setTimeout(() => {
       navigate(path);
-      // Wait for the page to load and then start fade out
       setTimeout(() => {
         setIsLoading(false);
       }, 1550);

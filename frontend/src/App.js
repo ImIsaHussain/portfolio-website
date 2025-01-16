@@ -1,18 +1,18 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import CustomCursor from './components/common/CustomCursor';
+import Navbar from './components/layout/Navbar';
 import Loader from './components/common/Loader';
 import InitialLoader from './components/common/InitialLoader';
-import Navbar from './components/layout/Navbar';
-import CustomCursor from './components/common/CustomCursor';
-import Hero from './pages/home/Hero';
 import Contact from './pages/Contact';
+import Hero from './pages/home/Hero';
 import Home from './pages/home/Home';
 import useLoader from './hooks/useLoader';
 import useInitialLoader from './hooks/useInitialLoader';
 
 function App() {
   const { isLoading, handleRouteChange } = useLoader();
-  const isInitialLoad = useInitialLoader();
+  const { isInitialLoad } = useInitialLoader();
 
   return (
     <div>

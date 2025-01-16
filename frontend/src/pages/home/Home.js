@@ -3,7 +3,7 @@ import Hero from './Hero';
 import About from './About';
 import Projects from './Projects';
 import Blog from './Blog';
-import Contact from './Contact';
+import ContactRedirect from './ContactRedirect';
 import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 import Styles from '../../styles/pages/Home.module.css';
 
@@ -22,7 +22,7 @@ function Home() {
           <div className={Styles.section}><About /></div>
           <div className={Styles.section}><Projects /></div>
           <div className={Styles.section}><Blog /></div>
-          <div className={Styles.section}><Contact /></div>
+          <div className={Styles.section}><ContactRedirect /></div>
         </div>
       </div>
     </div>

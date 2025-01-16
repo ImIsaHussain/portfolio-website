@@ -9,6 +9,11 @@ function useCursorInteraction(sounds) {
   const { playSound, initializeAudio } = useAudioPlayer(sounds);
 
   useEffect(() => {
+    // Initialize audio immediately when the hook mounts
+    initializeAudio();
+  }, [initializeAudio]);
+
+  useEffect(() => {
     const onMouseOver = (e) => {
       if (isInteractiveElement(e.target)) {
         const elementType = e.target.dataset.cursorType || 'default';
@@ -25,7 +30,6 @@ function useCursorInteraction(sounds) {
     const onMouseClick = (e) => {
       if (!isInteractiveElement(e.target)) return;
 
-      initializeAudio();
       const elementType = e.target.dataset.cursorType || 'default';
       playSound(`click_${elementType}`);
       setClicked(true);
@@ -43,7 +47,7 @@ function useCursorInteraction(sounds) {
       document.removeEventListener('mouseout', onMouseOut);
       document.removeEventListener('click', onMouseClick);
     };
-  }, [playSound, initializeAudio]);
+  }, [playSound]);
 
   return {
     isHovering,

@@ -14,8 +14,13 @@ function Hero() {
       <div className={Styles.ball8} />
       <div className={Styles.ball9} />
       <div className={Styles.ball10} />
+      <div className={Styles.ball11} />
+      <div className={Styles.ball12} />
+      <div className={Styles.ball13} />
+      <div className={Styles.ball14} />
+      <div className={Styles.ball15} />
       <div className={Styles.grain} />
-      <p className={Styles.primaryFont}>ISA HUSSAIN</p>
+      <p className={Styles.title}>ISA HUSSAIN</p>
     </div>
   );
 }
