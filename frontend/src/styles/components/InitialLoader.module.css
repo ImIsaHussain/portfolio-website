@@ -28,7 +28,7 @@
   font-size: var(--font-size-6);
   font-weight: normal;
   color: white;
-  font-family: var(--badeen-font);
+  font-family: var(--display-font);
   min-width: 200px;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

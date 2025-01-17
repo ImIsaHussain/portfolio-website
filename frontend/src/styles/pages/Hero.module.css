@@ -10,11 +10,11 @@
 }
 
 .title {
-  font-family: var(--badeen-font);
+  font-family: var(--display-font);
   font-size: var(--font-size-3);
   color: var(--text-primary);
   position: relative;
-  z-index: 9999;
+  z-index: 99;
 }
 
 /* Animated gradient balls */

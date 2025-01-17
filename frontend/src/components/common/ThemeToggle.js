@@ -7,15 +7,18 @@ function ThemeToggle() {
 
   return (
     <div className={Styles.container}>
+
       <label
         className={Styles.toggle}
         htmlFor="themeSwitch"
+        data-click-type="primary"
         aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       >
         <input
           id="themeSwitch"
           className={Styles.input}
           type="checkbox"
+          data-click-type="primary"
           checked={theme === 'dark'}
           onChange={toggleTheme}
         />

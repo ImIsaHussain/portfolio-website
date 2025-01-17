@@ -16,9 +16,12 @@ function useCursorInteraction(sounds) {
   useEffect(() => {
     const onMouseOver = (e) => {
       if (isInteractiveElement(e.target)) {
-        const elementType = e.target.dataset.cursorType || 'default';
+        const { hoverType, cursorType = 'default' } = e.target.dataset;
+        if (hoverType && sounds[`hover_${hoverType}`]) {
+          playSound(`hover_${hoverType}`);
+        }
         setIsHovering(true);
-        setCurrentElement(elementType);
+        setCurrentElement(cursorType);
       }
     };
 
@@ -30,8 +33,10 @@ function useCursorInteraction(sounds) {
     const onMouseClick = (e) => {
       if (!isInteractiveElement(e.target)) return;
 
-      const elementType = e.target.dataset.cursorType || 'default';
-      playSound(`click_${elementType}`);
+      const { clickType } = e.target.dataset;
+      if (clickType && sounds[`click_${clickType}`]) {
+        playSound(`click_${clickType}`);
+      }
       setClicked(true);
       setTimeout(() => {
         setClicked(false);
@@ -47,7 +52,7 @@ function useCursorInteraction(sounds) {
       document.removeEventListener('mouseout', onMouseOut);
       document.removeEventListener('click', onMouseClick);
     };
-  }, [playSound]);
+  }, [playSound, sounds]);
 
   return {
     isHovering,

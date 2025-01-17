@@ -9,7 +9,6 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  cursor: pointer;
   line-height: 1;
 }
 
