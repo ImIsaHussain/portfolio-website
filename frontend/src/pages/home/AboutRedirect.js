@@ -1,11 +1,16 @@
 import React, { useEffect, useRef } from 'react';
-import Styles from '../../styles/pages/About.module.css';
+import { Link } from 'react-router-dom';
+import Styles from '../../styles/pages/AboutRedirect.module.css';
 import profileImage from '../../assets/images/IsaNight.png';
 
-function About() {
+function AboutRedirect() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const imageRef = useRef(null);
+
+  const handleClick = () => {
+    // Add your click handler logic here
+  };
 
   useEffect(() => {
     const textObserver = new IntersectionObserver(
@@ -53,22 +58,13 @@ function About() {
             I&apos;m just a guy who is trying to make <accent>cool</accent> websites.
             <br />
           </p>
-          <div className={Styles.skills}>
-            <div>React</div>
-            <div>Next.js</div>
-            <div>TypeScript</div>
-            <div>Node.js</div>
-            <div>Python</div>
-            <div>AWS</div>
-            <div>Docker</div>
-            <div>GraphQL</div>
-            <div>MongoDB</div>
-            <div>PostgreSQL</div>
-            <div>Redis</div>
-            <div>Git</div>
-          </div>
         </div>
       </div>
+      <Link to="/about" data-click-type="primary" onClick={handleClick}>
+        <div className={Styles.learnMore}>
+          Learn More
+        </div>
+      </Link>
       <div className={Styles.imageContainer}>
         <img
           ref={imageRef}
@@ -81,4 +77,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutRedirect;

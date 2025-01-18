@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Hero from './Hero';
-import About from './About';
+import About from './AboutRedirect';
 import Projects from './Projects';
 import Blog from './Blog';
 import ContactRedirect from './ContactRedirect';

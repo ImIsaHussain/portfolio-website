@@ -5,6 +5,7 @@ import Loader from './components/common/Loader';
 import InitialLoader from './components/common/InitialLoader';
 import BackgroundAudio from './components/common/BackgroundAudio';
 import Contact from './pages/Contact';
+import About from './pages/About';
 import Hero from './pages/home/Hero';
 import Home from './pages/home/Home';
 import useLoader from './hooks/useLoader';
@@ -26,6 +27,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home letterRefsCallback={setHeroLetterRefs} />} />
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Hero />} />
           <Route path="/blog" element={<Hero />} />
           <Route path="/contact" element={<Contact />} />
