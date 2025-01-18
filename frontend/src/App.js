@@ -27,7 +27,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home letterRefsCallback={setHeroLetterRefs} onNavigate={handleRouteChange} />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About onNavigate={handleRouteChange} />} />
           <Route path="/projects" element={<Hero />} />
           <Route path="/blog" element={<Hero />} />
           <Route path="/contact" element={<Contact />} />

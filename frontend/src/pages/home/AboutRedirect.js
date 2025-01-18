@@ -66,7 +66,7 @@ function AboutRedirect({ onNavigate }) {
       </div>
       <Link to="/about" data-click-type="primary" onClick={handleClick('/about')}>
         <div data-click-type="primary" className={Styles.learnMore}>
-          Learn More
+          Find Out More...
         </div>
       </Link>
       <div className={Styles.imageContainer}>
