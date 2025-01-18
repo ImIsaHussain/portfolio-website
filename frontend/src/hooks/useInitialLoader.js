@@ -9,7 +9,7 @@ function useInitialLoader() {
 
     const timer = setTimeout(() => {
       setIsInitialLoad(false);
-    }, 9000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []); // Empty dependency array means this runs once on mount

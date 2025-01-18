@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from '../../styles/pages/Hero.module.css';
+import TitleNameAnimation from './TitleNameAnimation';
 
 function Hero() {
   return (
@@ -20,7 +21,7 @@ function Hero() {
       <div className={Styles.ball14} />
       <div className={Styles.ball15} />
       <div className={Styles.grain} />
-      <p className={Styles.title}>ISA HUSSAIN</p>
+      <TitleNameAnimation />
     </div>
   );
 }

@@ -10,8 +10,8 @@ function About() {
   useEffect(() => {
     const textObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          textRef.current.classList.add(Styles.visible);
+        if (entry.isIntersecting && textRef.current) {
+          textRef.current.classList.add(Styles.fadeIn);
           textObserver.disconnect();
         }
       },
@@ -20,7 +20,12 @@ function About() {
 
     const imageObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && imageRef.current) {
+          // Remove the class
+          imageRef.current.classList.remove(Styles.slideIn);
+          // Force a reflow by accessing offsetHeight
+          imageRef.current.getBoundingClientRect();
+          // Add the class back
           imageRef.current.classList.add(Styles.slideIn);
           imageObserver.disconnect();
         }
@@ -43,26 +48,34 @@ function About() {
     <section ref={sectionRef} className={Styles.section}>
       <div className={Styles.content}>
         <div ref={textRef} className={Styles.textContent}>
-          <p className={Styles.title}>About Me</p>
+          <p className={Styles.title}>WHO IS THIS DUDE?</p>
           <p className={Styles.description}>
-            A passionate developer with a love for creating beautiful and
-            functional web applications.
+            I&apos;m just a guy who is trying to make <accent>cool</accent> websites.
+            <br />
           </p>
           <div className={Styles.skills}>
             <div>React</div>
-            <div>JavaScript</div>
+            <div>Next.js</div>
+            <div>TypeScript</div>
             <div>Node.js</div>
-            <div>CSS</div>
+            <div>Python</div>
+            <div>AWS</div>
+            <div>Docker</div>
+            <div>GraphQL</div>
+            <div>MongoDB</div>
+            <div>PostgreSQL</div>
+            <div>Redis</div>
+            <div>Git</div>
           </div>
         </div>
-        <div className={Styles.imageContainer}>
-          <img
-            ref={imageRef}
-            src={profileImage}
-            alt="Isa Hussain (ME!)"
-            className={Styles.profileImage}
-          />
-        </div>
+      </div>
+      <div className={Styles.imageContainer}>
+        <img
+          ref={imageRef}
+          className={Styles.profileImage}
+          src={profileImage}
+          alt="Profile"
+        />
       </div>
     </section>
   );

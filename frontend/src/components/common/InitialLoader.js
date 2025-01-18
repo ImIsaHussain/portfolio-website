@@ -29,7 +29,7 @@ function InitialLoader({ isActive }) {
             clearInterval(interval);
             resolve();
           }
-        }, 100);
+        }, 10);
       }, delay);
     });
 
@@ -37,10 +37,10 @@ function InitialLoader({ isActive }) {
       // Initialize audio at the start
       initializeAudio();
 
-      await animateToNumber(0, 300);
+      await animateToNumber(0, 200);
       await animateToNumber(37, 0);
-      await animateToNumber(98, 300);
-      await animateToNumber(100, 200);
+      await animateToNumber(98, 200);
+      await animateToNumber(100, 100);
 
       // wait at 100 for 2 seconds
       await new Promise((resolve) => {

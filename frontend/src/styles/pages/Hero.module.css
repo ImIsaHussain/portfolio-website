@@ -15,6 +15,30 @@
   color: var(--text-primary);
   position: relative;
   z-index: 99;
+  display: flex;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translate(var(--start-x, -150px), var(--start-y, -150px)) scale(2, 0.9);
+  transition: all 1s cubic-bezier(1, -1.55, .65, 2.55);
+}
+
+/* Randomize starting positions for each letter with more varied offsets */
+.letter:nth-child(3n) {
+  --start-x: 180px;
+  --start-y: 120px;
+}
+
+.letter:nth-child(3n + 1) {
+  --start-x: -200px;
+  --start-y: 160px;
+}
+
+.letter:nth-child(3n + 2) {
+  --start-x: 140px;
+  --start-y: -180px;
 }
 
 /* Animated gradient balls */

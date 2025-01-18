@@ -1,3 +1,8 @@
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
 /* custom cursor */
 .customCursor {
   width: 20px;
@@ -19,6 +24,8 @@
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* custom cursor hover */
@@ -26,9 +33,4 @@
   width: 30px;
   height: 30px;
   transition: width 0.2s ease-out, height 0.2s ease-out;
-}
-
-/* Hide default cursor */
-* {
-  cursor: none !important;
 }
