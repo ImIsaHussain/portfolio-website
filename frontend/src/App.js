@@ -26,7 +26,7 @@ function App() {
       <Loader isActive={isLoading} />
       <main>
         <Routes>
-          <Route path="/" element={<Home letterRefsCallback={setHeroLetterRefs} />} />
+          <Route path="/" element={<Home letterRefsCallback={setHeroLetterRefs} onNavigate={handleRouteChange} />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Hero />} />
           <Route path="/blog" element={<Hero />} />

@@ -1,15 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
 import Styles from '../../styles/pages/AboutRedirect.module.css';
 import profileImage from '../../assets/images/IsaNight.png';
 
-function AboutRedirect() {
+function AboutRedirect({ onNavigate }) {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const imageRef = useRef(null);
 
-  const handleClick = () => {
-    // Add your click handler logic here
+  const handleClick = (path) => (e) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(path);
+    }
   };
 
   useEffect(() => {
@@ -60,8 +64,8 @@ function AboutRedirect() {
           </p>
         </div>
       </div>
-      <Link to="/about" data-click-type="primary" onClick={handleClick}>
-        <div className={Styles.learnMore}>
+      <Link to="/about" data-click-type="primary" onClick={handleClick('/about')}>
+        <div data-click-type="primary" className={Styles.learnMore}>
           Learn More
         </div>
       </Link>
@@ -76,5 +80,13 @@ function AboutRedirect() {
     </section>
   );
 }
+
+AboutRedirect.propTypes = {
+  onNavigate: propTypes.func,
+};
+
+AboutRedirect.defaultProps = {
+  onNavigate: null,
+};
 
 export default AboutRedirect;
