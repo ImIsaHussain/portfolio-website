@@ -1,9 +1,8 @@
 .section {
-  min-height: 100vh;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   position: relative;
-  padding: 2vw 0;
+  padding: 10vw 0;
   margin: 0;
   overflow: hidden;
 }
@@ -45,7 +44,7 @@
   margin-bottom: 2vw;
 }
 
-accent {
+.accent {
   font-family: var(--accent-font);
   color: var(--accent-primary);
   font-size: calc(var(--font-size-1) * 1.5);
@@ -66,7 +65,7 @@ accent {
   background-color: var(--bg-secondary);
   justify-content: center;
   border-radius: 100px;
-  box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 6px 6px 0 var(--shadow-color);
   cursor: pointer;
   text-align: center;
   color: var(--text-primary);
@@ -75,7 +74,7 @@ accent {
 
 .learnMore:hover {
   background-color: var(--accent-primary);
-  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 .imageContainer {

@@ -59,7 +59,8 @@ function AboutRedirect({ onNavigate }) {
         <div ref={textRef} className={Styles.textContent}>
           <p className={Styles.title}>WHO IS THIS DUDE?</p>
           <p className={Styles.description}>
-            I&apos;m just a guy who is trying to make <accent>cool</accent> websites.
+            I&apos;m just a guy who
+            is trying to make <span className={Styles.accent}>cool</span> websites.
             <br />
           </p>
         </div>

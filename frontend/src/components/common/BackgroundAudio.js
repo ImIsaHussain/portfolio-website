@@ -101,11 +101,11 @@ function BackgroundAudio() {
         <div className={styles.speaker}>
           <svg viewBox="0 0 75 75" version="1.0" xmlns="http://www.w3.org/2000/svg">
             <path
-              style={{ stroke: '#fff', strokeWidth: 5, strokeLinejoin: 'round', fill: '#fff' }}
+              style={{ stroke: 'var(--text-primary)', strokeWidth: 5, strokeLinejoin: 'round', fill: 'var(--text-primary)' }}
               d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
             />
             <path
-              style={{ fill: 'none', stroke: '#fff', strokeWidth: 5, strokeLinecap: 'round' }}
+              style={{ fill: 'none', stroke: 'var(--text-primary)', strokeWidth: 5, strokeLinecap: 'round' }}
               d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
             />
           </svg>

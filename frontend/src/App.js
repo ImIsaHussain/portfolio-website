@@ -30,7 +30,7 @@ function App() {
           <Route path="/about" element={<About onNavigate={handleRouteChange} />} />
           <Route path="/projects" element={<Hero />} />
           <Route path="/blog" element={<Hero />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact onNavigate={handleRouteChange} />} />
         </Routes>
       </main>
     </div>
