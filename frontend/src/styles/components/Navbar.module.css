@@ -9,7 +9,7 @@
   padding: 20px;
   background-color: transparent;
   color: var(--text-primary);
-  font-size: 18px;
+  font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
   z-index: 1000;
@@ -47,4 +47,11 @@
 
 .themeToggle:active {
   transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+    font-size: .9rem;
+  }
 }

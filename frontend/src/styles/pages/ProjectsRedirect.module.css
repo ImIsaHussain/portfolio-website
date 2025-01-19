@@ -35,7 +35,7 @@
 .container {
   min-height: 100vh;
   background: rgb(97,183,23);
-  background: linear-gradient(180deg,var(--bg-primary) 10%, rgba(98, 183, 23, 0.4) 50%, var(--bg-primary) 90%);
+  background: linear-gradient(155deg, rgba(98, 183, 23, 0.6) 50%, var(--bg-primary) 50%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,14 +63,14 @@
 }
 
 .projectPreview {
+  height: 40rem;
   width: 100%;
-  height: 60vh;
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.8s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .projectPreview.visible {

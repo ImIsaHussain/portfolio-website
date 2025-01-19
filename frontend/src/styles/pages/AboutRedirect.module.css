@@ -1,5 +1,6 @@
 .section {
   background-color: var(--bg-primary);
+  background: linear-gradient(-25deg, rgba(98, 183, 23, 0.6) 50%, var(--bg-primary) 50%);
   color: var(--text-primary);
   position: relative;
   padding: 10vw 0;

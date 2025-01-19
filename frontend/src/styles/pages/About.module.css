@@ -153,7 +153,7 @@
 
 .skillCategory h3 {
   font-family: var(--primary-font);
-  font-size: var(--font-size-0);
+  font-size: calc(var(--font-size-0) * .5);
   color: var(--accent-primary);
   margin-bottom: 1rem;
 }
@@ -165,7 +165,7 @@
 
 .skillCategory li {
   font-family: var(--secondary-font);
-  font-size: calc(var(--font-size-0) * 0.9);
+  font-size: calc(var(--font-size-0) * .4);
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
@@ -337,5 +337,25 @@
 
   .imageGalleryLeft, .imageGalleryRight {
     display: none;
+  }
+
+  .section h2 {
+    font-size: var(--font-size-2);
+  }
+
+  .section p {
+    font-size: var(--font-size-1);
+  }
+
+  .section .accent {
+    font-size: calc(var(--font-size-1) * 1.2);
+  }
+
+  .skillCategory h3 {
+    font-size: var(--font-size-1);
+  }
+
+  .button {
+    font-size: var(--font-size-2);
   }
 }

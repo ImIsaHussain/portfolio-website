@@ -6,7 +6,8 @@ import InitialLoader from './components/common/InitialLoader';
 import BackgroundAudio from './components/common/BackgroundAudio';
 import Contact from './pages/Contact';
 import About from './pages/About';
-import Hero from './pages/home/Hero';
+import Projects from './pages/Projects';
+import Blog from './pages/Blog';
 import Home from './pages/home/Home';
 import useLoader from './hooks/useLoader';
 import useInitialLoader from './hooks/useInitialLoader';
@@ -28,8 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home letterRefsCallback={setHeroLetterRefs} onNavigate={handleRouteChange} />} />
           <Route path="/about" element={<About onNavigate={handleRouteChange} />} />
-          <Route path="/projects" element={<Hero />} />
-          <Route path="/blog" element={<Hero />} />
+          <Route path="/projects" element={<Projects onNavigate={handleRouteChange} />} />
+          <Route path="/blog" element={<Blog onNavigate={handleRouteChange} />} />
           <Route path="/contact" element={<Contact onNavigate={handleRouteChange} />} />
         </Routes>
       </main>

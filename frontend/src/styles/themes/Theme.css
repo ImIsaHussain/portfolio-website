@@ -6,6 +6,7 @@
   --accent-font: 'Just Another Hand', serif;
 
   /* Font sizes */
+  --font-size-0: 3vw;
   --font-size-1: 5vw;
   --font-size-2: 10vw;
   --font-size-3: 15vw;

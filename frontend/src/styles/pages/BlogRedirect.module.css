@@ -1,42 +1,86 @@
 .section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 4rem 2rem;
-  background-color: #ffffff;
+  background: var(--bg-primary);
+}
+
+.title {
+  font-family: var(--accent-font);
+  font-size: var(--font-size-2);
+  color: var(--text-primary);
+  margin-bottom: 3rem;
 }
 
 .blogPosts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .blogCard {
-  padding: 1.5rem;
-  border: 1px solid #eaeaea;
-  border-radius: 8px;
-  transition: box-shadow 0.3s ease;
+  background-image: url('../../assets/images/DSC06445.JPG');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.blogCard:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.blogCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  z-index: 1;
 }
 
-.blogCard h3 {
+.postTitle {
+  font-family: var(--primary-font);
+  font-size: var(--font-size-1);
+  color: white;
   margin-bottom: 1rem;
-  color: #333;
+  position: relative;
+  z-index: 2;
 }
 
-.blogCard p {
-  color: #666;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.postContent {
+  font-family: var(--accent-font);
+  font-size: var(--font-size-0);
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
-.blogCard span {
-  color: #0070f3;
-  font-weight: 500;
+.blogCard a {
+  font-family: var(--primary-font);
+  font-size: calc(var(--font-size-0) * .5);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--accent-primary);
+  border-radius: 2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
 }
 
-.blogCard span:hover {
-  text-decoration: underline;
+.blogCard a:hover {
+  background: var(--accent-primary);
+  transform: translateY(-2px);
 }
