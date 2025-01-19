@@ -3,35 +3,32 @@
   background-color: var(--bg-primary);
 }
 
-.contactInfo {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contactInfo p {
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-  line-height: 1.6;
-}
-
-.socialLinks {
+.container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.socialLinks a {
-  color: #333;
+  align-items: flex-end;
+  min-height: auto;
+  width: 100%;
+  background-color: var(--bg-primary);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 2px solid #333;
-  border-radius: 25px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.socialLinks a:hover {
-  background-color: #333;
-  color: white;
+.container:hover {
+  background-color: var(--bg-secondary);
+}
+
+.text {
+  font-family: var(--display-font);
+  color: var(--text-primary);
+  font-size: calc(var(--font-size-3) * 1.2);
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.text:hover {
+  color: var(--accent-primary);
 }

@@ -98,11 +98,11 @@
   height: 100%;
   object-fit: cover;
   transform: translateX(100%) rotate(0deg);
-  transition: transform 1s ease-out;
+  transition: transform .8s ease-out;
 }
 
 .profileImage.slideIn {
-  transform: translateX(0) rotate(10deg);
+  transform: translateX(0) rotate(15deg);
 }
 
 @media (min-width: 768px) {

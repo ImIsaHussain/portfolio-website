@@ -1,0 +1,139 @@
+.section {
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projectCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectCard h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.projectCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.container {
+  min-height: 100vh;
+  background: rgb(97,183,23);
+  background: linear-gradient(180deg,var(--bg-primary) 10%, rgba(98, 183, 23, 0.4) 50%, var(--bg-primary) 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.title {
+  font-family: var(--display-font);
+  font-size: var(--font-size-3);
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.projectPreview {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.projectPreview.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.previewImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.previewOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.projectPreview:hover .previewImage {
+  transform: scale(1.05);
+}
+
+.projectPreview:hover .previewOverlay {
+  transform: translateY(0);
+}
+
+.previewOverlay h5 {
+  font-family: var(--primary-font);
+  font-size: var(--font-size-1);
+  margin-bottom: 0.5rem;
+}
+
+.previewOverlay p {
+  font-family: var(--secondary-font);
+  font-size: calc(var(--font-size-1) * 0.5);
+  color: var(--text-secondary);
+}
+
+.imgButton {
+  font-family: var(--accent-font);
+  font-size: calc(var(--font-size-1) * 0.8);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.button {
+  font-family: var(--accent-font);
+  font-size: calc(var(--font-size-1) * 0.8);
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-top: 3rem;
+  transition: color 0.3s ease;
+}
+
+.button:hover {
+  color: var(--accent-primary);
+}
