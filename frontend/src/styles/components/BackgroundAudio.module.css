@@ -72,3 +72,9 @@
   right: 20px;
   z-index: 1000;
 }
+
+@media (max-width: 768px) {
+  .backgroundAudioContainer {
+    display: none;
+  }
+}

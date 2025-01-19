@@ -4,10 +4,12 @@
 }
 
 .container {
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   position: relative;
   transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
 }
 
 .sections {

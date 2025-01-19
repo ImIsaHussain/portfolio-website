@@ -45,3 +45,14 @@
   --border-color: #404040;
   --shadow-color: rgba(0, 0, 0, 0.3);
 }
+
+/* Hide scrollbars globally while maintaining scroll functionality */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari */
+*::-webkit-scrollbar {
+  display: none;
+}

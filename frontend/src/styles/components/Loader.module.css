@@ -50,3 +50,9 @@
     stroke-dashoffset: -800;
   }
 }
+
+@media (max-width: 768px) {
+  .scribbleLoader path {
+    stroke-width: 150;
+  }
+}

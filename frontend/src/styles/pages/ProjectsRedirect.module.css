@@ -137,3 +137,10 @@
 .button:hover {
   color: var(--accent-primary);
 }
+
+@media (max-width: 768px) {
+  .button {
+    margin-top: 0;
+    font-size: calc(var(--font-size-1) * 1.7);
+  }
+}

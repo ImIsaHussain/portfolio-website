@@ -355,6 +355,10 @@
     font-size: var(--font-size-1);
   }
 
+  .skillCategory li {
+    font-size: calc(var(--font-size-0) * 1.2);
+  }
+
   .button {
     font-size: var(--font-size-2);
   }
