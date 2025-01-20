@@ -23,7 +23,7 @@ function Loader({ isActive }) {
                L-20,60
                L120,80
                L-20,100"
-            strokeWidth="50"
+            strokeWidth="60"
             strokeLinecap="round"
             strokeLinejoin="round"
           />

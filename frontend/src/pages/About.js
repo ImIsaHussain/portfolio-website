@@ -32,10 +32,10 @@ function About({ onNavigate }) {
 
       <div className={Styles.contentWrapper}>
         <div className={Styles.imageGalleryLeft}>
-          <img src={img1} alt="Isa 1" className={`${Styles.galleryImage} ${Styles.leftImage1}`} />
+          <img src={img3} alt="Isa 1" className={`${Styles.galleryImage} ${Styles.leftImage1}`} />
           <img src={img9} alt="Isa 2" className={`${Styles.galleryImage} ${Styles.leftImage2}`} />
-          <img src={img3} alt="Isa 3" className={`${Styles.galleryImage} ${Styles.leftImage3}`} />
-          <img src={img8} alt="Isa 4" className={`${Styles.galleryImage} ${Styles.leftImage4}`} />
+          <img src={img1} alt="Isa 3" className={`${Styles.galleryImage} ${Styles.leftImage3}`} />
+          <img src={img6} alt="Isa 4" className={`${Styles.galleryImage} ${Styles.leftImage4}`} />
           <img src={img5} alt="Isa 5" className={`${Styles.galleryImage} ${Styles.leftImage5}`} />
         </div>
 
@@ -131,7 +131,7 @@ function About({ onNavigate }) {
         <div className={Styles.imageGalleryRight}>
           <p className={Styles.hoverText}>hover over<br />me!</p>
           <img src={img4} alt="Isa 4" className={`${Styles.galleryImage} ${Styles.rightImage1}`} />
-          <img src={img6} alt="Isa 5" className={`${Styles.galleryImage} ${Styles.rightImage2}`} />
+          <img src={img8} alt="Isa 5" className={`${Styles.galleryImage} ${Styles.rightImage2}`} />
           <img src={img7} alt="Isa 6" className={`${Styles.galleryImage} ${Styles.rightImage3}`} />
           <img src={img10} alt="Isa 7" className={`${Styles.galleryImage} ${Styles.rightImage4}`} />
           <img src={img2} alt="Isa 8" className={`${Styles.galleryImage} ${Styles.rightImage5}`} />
