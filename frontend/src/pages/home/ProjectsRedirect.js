@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Styles from '../../styles/pages/ProjectsRedirect.module.css';
-import projectImage from '../../assets/images/DSC06445.JPG';
+import projectImage from '../../assets/images/PortfolioV1ss.jpeg';
 
 function ProjectsRedirect({ onNavigate }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +36,10 @@ function ProjectsRedirect({ onNavigate }) {
             <img src={projectImage} alt="Latest Project" className={Styles.previewImage} />
             <div className={Styles.previewOverlay}>
               <h5>Portfolio Website</h5>
-              <p>A modern, interactive portfolio built with React</p>
+              <p>
+                Version 1 of my portfolio website.
+                Enough spaghetti code to feed a city, but gotta start somewhere.
+              </p>
             </div>
           </div>
         </Link>

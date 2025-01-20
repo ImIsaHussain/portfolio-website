@@ -17,7 +17,7 @@ function Navbar({ onNavigate }) {
       <div className={Styles.navLinks}>
         <Link to="/" data-click-type="primary" onClick={handleClick('/')}>Home</Link>
         <Link to="/about" data-click-type="primary" onClick={handleClick('/about')}>About</Link>
-        <Link to="/projects" data-hover-type="primary" onClick={handleClick('/projects')}>Projects</Link>
+        <Link to="/projects" data-click-type="primary" onClick={handleClick('/projects')}>Projects</Link>
         <Link to="/blog" data-click-type="primary" onClick={handleClick('/blog')}>Blog</Link>
         <Link to="/contact" data-click-type="primary" onClick={handleClick('/contact')}>Contact</Link>
       </div>

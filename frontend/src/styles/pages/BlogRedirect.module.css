@@ -29,7 +29,7 @@
   padding: 3rem;
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  height: 50vh;
   width: 70%;
   display: flex;
   flex-direction: column;

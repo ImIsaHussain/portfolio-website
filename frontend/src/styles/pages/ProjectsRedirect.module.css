@@ -80,8 +80,9 @@
 
 .previewImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
@@ -107,13 +108,13 @@
 
 .previewOverlay h5 {
   font-family: var(--primary-font);
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-0);
   margin-bottom: 0.5rem;
 }
 
 .previewOverlay p {
   font-family: var(--secondary-font);
-  font-size: calc(var(--font-size-1) * 0.5);
+  font-size: calc(var(--font-size-0) * 0.5);
   color: var(--text-secondary);
 }
 

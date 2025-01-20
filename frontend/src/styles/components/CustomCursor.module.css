@@ -7,7 +7,7 @@
 .customCursor {
   width: 20px;
   height: 20px;  
-  background-color: black;
+  background-color: white;
   border: none;
   border-radius: 50%;
   position: fixed;
@@ -15,9 +15,6 @@
   left: -10px;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: difference;
-  backdrop-filter: invert(1);
-  -webkit-backdrop-filter: invert(1);
   transform-origin: center;
   transition: width 0.2s ease-out, height 0.2s ease-out;
   -webkit-backface-visibility: hidden;
@@ -26,6 +23,7 @@
   transform-style: preserve-3d;
   -webkit-user-select: none;
   user-select: none;
+  mix-blend-mode: exclusion;
 }
 
 /* custom cursor hover */
@@ -33,4 +31,10 @@
   width: 30px;
   height: 30px;
   transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+/* clicked state */
+.clicked {
+  transform: scale(0.8);
+  transition: transform 0.2s ease-out;
 }
