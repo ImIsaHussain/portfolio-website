@@ -79,7 +79,7 @@ function About({ onNavigate }) {
                   </ul>
                 </div>
                 <div className={Styles.skillCategory}>
-                  <h3>Tools & Technologies</h3>
+                  <h3>Tools & Tech</h3>
                   <ul>
                     <li>Git & GitHub</li>
                     <li>Docker</li>

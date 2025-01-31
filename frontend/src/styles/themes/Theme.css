@@ -6,13 +6,28 @@
   --accent-font: 'Just Another Hand', serif;
 
   /* Font sizes */
-  --font-size-0: 3vw;
-  --font-size-1: 5vw;
-  --font-size-2: 10vw;
-  --font-size-3: 15vw;
-  --font-size-4: 20vw;
-  --font-size-5: 30vw;
-  --font-size-6: 40vw;
+  --font-size-xs: 0.75rem;   /* Extra small text */
+  --font-size-sm: 0.875rem;  /* Small text */
+  --font-size-0: 1rem;       /* Base text size */
+  --font-size-1: 1.5rem;     /* Larger text */
+  --font-size-2: 2.5rem;     /* Subtitles */
+  --font-size-3: 4rem;       /* Small headers */
+  --font-size-4: 5rem;       /* Medium headers */
+  --font-size-5: 6rem;       /* Large headers */
+  --font-size-6: 8rem;       /* Extra large headers */
+  --font-size-7: 10rem;      /* Display text */
+  --font-size-8: 12rem;      /* Large display */
+  --font-size-9: 15rem;      /* Extra large display */
+  --font-size-10: 20rem;     /* Maximum display */
+
+  /* Font size multipliers for flexible adjustments */
+  --size-multiplier-xs: 0.75;
+  --size-multiplier-sm: 0.875;
+  --size-multiplier-md: 1;
+  --size-multiplier-lg: 1.25;
+  --size-multiplier-xl: 1.5;
+  --size-multiplier-2xl: 2;
+  --size-multiplier-3xl: 3;
 
   /* Font weights */
   --font-weight-1: 300;

@@ -11,7 +11,7 @@
 
 .title {
   font-family: var(--display-font);
-  font-size: var(--font-size-3);
+  font-size: var(--font-size-9);
   color: var(--text-primary);
   position: relative;
   z-index: 99;

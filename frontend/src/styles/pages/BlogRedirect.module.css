@@ -10,9 +10,10 @@
 
 .title {
   font-family: var(--accent-font);
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-8);
   color: var(--text-primary);
   margin-bottom: 3rem;
+  white-space: nowrap;
 }
 
 .blogPosts {
@@ -22,7 +23,7 @@
 }
 
 .blogCard {
-  background-image: url('../../assets/images/DSC06445.JPG');
+  background-image: url('../../assets/images/loadingImage.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
@@ -49,7 +50,7 @@
 
 .postTitle {
   font-family: var(--primary-font);
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-5);
   color: white;
   margin-bottom: 1rem;
   position: relative;
@@ -58,7 +59,7 @@
 
 .postContent {
   font-family: var(--accent-font);
-  font-size: var(--font-size-0);
+  font-size: var(--font-size-2);
   color: white;
   margin-bottom: 2rem;
   position: relative;
@@ -67,7 +68,7 @@
 
 .blogCard a {
   font-family: var(--primary-font);
-  font-size: calc(var(--font-size-0) * .5);
+  font-size: var(--font-size-1);
   color: white;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
@@ -83,4 +84,22 @@
 .blogCard a:hover {
   background: var(--accent-primary);
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-3);
+  }
+
+  .blogCard a {
+    font-size: var(--font-size-1);
+  }
+
+  .postTitle {
+    font-size: var(--font-size-2);
+  }
+
+  .postContent {
+    font-size: var(--font-size-1);
+  }
 }

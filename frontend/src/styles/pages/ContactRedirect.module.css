@@ -22,7 +22,7 @@
 .text {
   font-family: var(--display-font);
   color: var(--text-primary);
-  font-size: calc(var(--font-size-3) * 1.2);
+  font-size: var(--font-size-9);
   text-align: center;
   width: 100%;
   white-space: nowrap;
